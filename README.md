@@ -1,37 +1,28 @@
-<h1 align="center">Magisk Module Template Extended (MMT-Ex)</h1>
+# Realify
+Welcome to Realify! This module attempts to make the budget realmeUI experience much better, by enabling features which are commonly disabled on what Realme considers "low-end" devices.
 
-<div align="center">
-  <!-- Version -->
-    <img src="https://img.shields.io/badge/Version-v2.0-blue.svg?longCache=true&style=popout-square"
-      alt="Version" />
-  <!-- Last Updated -->
-    <img src="https://img.shields.io/badge/Updated-January 21, 2022-green.svg?longCache=true&style=flat-square"
-      alt="_time_stamp_" />
-  <!-- Min Magisk -->
-    <img src="https://img.shields.io/badge/MinMagisk-20.4-red.svg?longCache=true&style=flat-square"
-      alt="_time_stamp_" /></div>
+# Disclaimer
+```
+/*
+ * Your warranty is void.
+ * I am not responsible for bricked devices, dead SD cards, thermonuclear war,
+ * or you getting fired because the alarm app failed.
+ * Please do some research if you have any concerns about features included
+ * in the products you find here before flashing it!
+ * YOU are choosing to make these modifications.
+ */
+```
 
-<div align="center">
-  <strong>MMT Extended is the spiritual successor of Unity and makes magisk module creation easy. Instructions in the 
-    <h3><a href="https://github.com/Zackptg5/MMT-Extended/wiki">Wiki</a></h3>
-</div>
+# Compatbility
+This module targets devices running realmeUI 3.
 
-<div align="center">
-  <h3>
-    <a href="https://github.com/Zackptg5/MMT-Extended">
-      Source Code
-    </a>
-    <span> | </span>
-    <a href="https://github.com/Zackptg5/MMT-Extended-Addons">
-      Addons Repository
-    </a>
-    <span> | </span>
-    <a href="https://forum.xda-developers.com/apps/magisk/magisk-module-template-extended-mmt-ex-t4029819">
-      XDA
-    </a>
-  </h3>
-</div>
+Currently, the module has been tested on the following devices:
+- realme 8 (RMX3085)
 
-### Usage
-- [Follow the directions here (DO NOT FORK)](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
-- Then follow instructions in [Wiki](https://github.com/Zackptg5/MMT-Extended/wiki)
+Feel free to contribute and open:
+* An issue - If the module did not work for you :(
+* A PR - To add the device to this list :)
+
+# Special Thanks
+- [techyminati](https://github.com/techyminati) for the method used to control features
+- This module also uses [MMT-Extended](https://github.com/Zackptg5/MMT-Extended) by [Zackptg5](https://github.com/Zackptg5)
