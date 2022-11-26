@@ -19,6 +19,7 @@ check_realmeui_ver()
         FEATURE_PATH="/my_product/etc/extension/realme_product_rom_extend_feature_${PRJ_NAME}.xml"
     else
         echo "Error"
+        exit 1
     fi
 }
 
@@ -46,8 +47,6 @@ remove_lowend_features()
         remove_feature com.android.launcher.card_disabled
         # Disables "lightos" sound recorder
         remove_feature com.oplus.soundrecorder.lightos
-    else
-        echo "Error"
     fi
 }
 
