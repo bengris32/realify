@@ -58,6 +58,22 @@ remove_lowend_features()
     remove_feature com.oplus.soundrecorder.lightos
     # Disables "lightos" QS tiles
     remove_feature com.android.systemui.apply_light_os_qs_tile
+    # Enables SmartSidebar
+    remove_feature com.oplus.smartsidebar.default.off
+    remove_feature com.oplus.floatassistant.single_view
+    remove_feature com.oplus.floatassistant.assistive_ball_disable
+    # Enables Live Wallpapers
+    remove_feature com.oppo.launcher.LIVE_WALLPAPER_ENTRY_DISABLED
+    remove_feature com.oppo.launcher.OVERLAY_DISABLED
+    remove_feature com.oppo.launcher.DRAW_MODE_APP_RANK_DISABLED
+    remove_feature com.coloros.wallpapers.LIGHT_WEIGHT_OS_FUNC
+    remove_feature com.android.wallpaper.livepicker.LIGHT_WEIGHT_OS_FUNC
+    # Enables high-end charging animation
+    remove_feature com.android.systemui.charge_lizi_anim_disable
+    # Enables high-end gamespace features
+    remove_feature com.coloros.gamespace_package_share_notsupport
+    remove_feature com.coloros.gamespace_gameboard_notsupport
+    remove_feature com.coloros.gamespace_game_focus_mode_notsupport
     # Disable OPPO LightOS (realmeUI 1)
     remove_feature oppo.sys.light.func
     remove_feature oppo.sys.light.func.os7_ext
