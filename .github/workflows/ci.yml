@@ -16,7 +16,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "realifyv2"
+        automatic_release_tag: "realifyv21"
         prerelease: true
         title: "${{ env.GITHUB_SHA }}"
         files: |
