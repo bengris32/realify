@@ -29,6 +29,8 @@ check_realmeui_ver()
         FEATURE_PATH="/my_product/etc/extension/appfeature_liteos.xml"
     elif [[ $RUI_VER == V3.0 ] || [ $RUI_VER == V4.0 ]]; then
         FEATURE_PATH="/my_product/etc/extension/realme_product_rom_extend_feature_${PRJ_NAME}.xml"
+    elif [[ $RUI_VER == V1.0 ]]; then
+        FEATURE_PATH="/oppo_product/etc/permissions/com.oppo.features.os.xml"
     else
         log "Unknown realmeUI version: ${RUI_VER}"
         exit 1
@@ -56,6 +58,11 @@ remove_lowend_features()
     remove_feature com.oplus.soundrecorder.lightos
     # Disables "lightos" QS tiles
     remove_feature com.android.systemui.apply_light_os_qs_tile
+    # Disable OPPO LightOS (realmeUI 1)
+    remove_feature oppo.sys.light.func
+    remove_feature oppo.sys.light.func.os7_ext
+    # Enable Multiuser support (RUI 1)
+    remove_feature oppo.multiuser.entry.unsupport
 }
 
 setup_mount()
