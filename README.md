@@ -14,15 +14,19 @@ Welcome to Realify! This module attempts to make the budget realmeUI experience 
 ```
 
 # Compatbility
-This module targets devices running realmeUI 3.
+This module targets devices running realmeUI 1/2/3/4.
 
 Currently, the module has been tested on the following devices:
-- realme 8 (RMX3085)
+- realme 8 (RMX3085 with UI 3.0)
+- realme C11 (RMX2185/RMX2185SG with UI 2.0)
+- realme C12 (RMX2189/RMX2184 with UI 2.0)
+- realme C15 (RMX2180 with UI 2.0)
+- realme C21 (RMX3201 with UI 2.0)
 
 Feel free to contribute and open:
 * An issue - If the module did not work for you :(
 * A PR - To add the device to this list :)
 
 # Special Thanks
-- [techyminati](https://github.com/techyminati) for the method used to control features
+- [techyminati](https://github.com/techyminati) for the method used to control features, general improvements, and realmeUI 1/2/4 support!
 - This module also uses [MMT-Extended](https://github.com/Zackptg5/MMT-Extended) by [Zackptg5](https://github.com/Zackptg5)

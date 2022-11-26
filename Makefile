@@ -2,7 +2,7 @@ NAME := realify
 
 DATE := $(shell date "+%Y%m%d-%H%M")
 
-REV := v1
+REV := v2
 
 ZIP := $(NAME)-$(REV)-$(DATE).zip
 
