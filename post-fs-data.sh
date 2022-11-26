@@ -4,10 +4,22 @@
 PRJ_NAME=$(getprop ro.oplus.image.my_product.type)
 RUI_VER=$(getprop ro.build.version.realmeui)
 TEMP_PATH="/cache/feature.xml"
+LOG_PATH="/cache/realify.log"
 
 # Functions 
+cleanup_log()
+{
+    rm $LOG_PATH
+}
+
+log()
+{
+    echo $1 >> $LOG_PATH
+}
+
 remove_feature()
 {
+    log "Removing feature: ${1}"
     sed -i "/${1}/d" $TEMP_PATH
 }
 
@@ -18,9 +30,11 @@ check_realmeui_ver()
     elif [[ $RUI_VER == V3.0 ]]; then
         FEATURE_PATH="/my_product/etc/extension/realme_product_rom_extend_feature_${PRJ_NAME}.xml"
     else
-        echo "Error"
+        log "Unknown realmeUI version: ${RUI_VER}"
         exit 1
     fi
+    log "Detected realmeUI Version: ${RUI_VER}"
+    log "Target file: ${FEATURE_PATH}"
 }
 
 prepare_feature_list() 
@@ -53,10 +67,12 @@ remove_lowend_features()
 setup_mount()
 {
     # Now, bind mount the resulting file to the original location
+    log "Mounting ${TEMP_PATH} to ${FEATURE_PATH}"
     mount --bind $TEMP_PATH $FEATURE_PATH
 }
 
 # Run these in order
+cleanup_log
 check_realmeui_ver
 prepare_feature_list
 remove_lowend_features
