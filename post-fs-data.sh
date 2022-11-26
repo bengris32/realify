@@ -45,23 +45,17 @@ prepare_feature_list()
 
 remove_lowend_features()
 {
-    if [[ $RUI_VER == V2.0 ]]; then
-        # Enables high end app launch animations
-        remove_feature com.oppo.launcher.light_animator
-        # Enables blur in the majority of the UI
-        remove_feature com.android.systemui.gauss_blur_disabled
-        # Disables "lightos" QS tiles
-        remove_feature com.android.systemui.apply_light_os_qs_tile
-    elif [[ $RUI_VER == V3.0 ] || [ $RUI_VER == V4.0 ]]; then
-        # Enables high end app launch animations
-        remove_feature com.android.launcher.light_animator
-        # Enables blur in the majority of the UI
-        remove_feature com.android.systemui.gauss_blur_disabled
-        # Enables launcher card
-        remove_feature com.android.launcher.card_disabled
-        # Disables "lightos" sound recorder
-        remove_feature com.oplus.soundrecorder.lightos
-    fi
+    # Enables high end app launch animations
+    remove_feature com.android.launcher.light_animator
+    remove_feature com.oppo.launcher.light_animator
+    # Enables blur in the majority of the UI
+    remove_feature com.android.systemui.gauss_blur_disabled
+    # Enables launcher card
+    remove_feature com.android.launcher.card_disabled
+    # Disables "lightos" sound recorder
+    remove_feature com.oplus.soundrecorder.lightos
+    # Disables "lightos" QS tiles
+    remove_feature com.android.systemui.apply_light_os_qs_tile
 }
 
 setup_mount()
