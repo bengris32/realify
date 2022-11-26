@@ -27,7 +27,7 @@ check_realmeui_ver()
 {
     if [[ $RUI_VER == V2.0 ]]; then
         FEATURE_PATH="/my_product/etc/extension/appfeature_liteos.xml"
-    elif [[ $RUI_VER == V3.0 ]]; then
+    elif [[ $RUI_VER == V3.0 ] || [ $RUI_VER == V4.0 ]]; then
         FEATURE_PATH="/my_product/etc/extension/realme_product_rom_extend_feature_${PRJ_NAME}.xml"
     else
         log "Unknown realmeUI version: ${RUI_VER}"
@@ -52,7 +52,7 @@ remove_lowend_features()
         remove_feature com.android.systemui.gauss_blur_disabled
         # Disables "lightos" QS tiles
         remove_feature com.android.systemui.apply_light_os_qs_tile
-    elif [[ $RUI_VER == V3.0 ]]; then
+    elif [[ $RUI_VER == V3.0 ] || [ $RUI_VER == V4.0 ]]; then
         # Enables high end app launch animations
         remove_feature com.android.launcher.light_animator
         # Enables blur in the majority of the UI
