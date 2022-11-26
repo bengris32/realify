@@ -4,7 +4,9 @@ DATE := $(shell date "+%Y%m%d-%H%M")
 
 REV := v2
 
-ZIP := $(NAME)-$(REV)-$(DATE).zip
+HASH ?= release
+
+ZIP := $(NAME)-$(REV)-$(HASH)-$(DATE).zip
 
 EXCLUDE := Makefile *.git*  *.zip
 

@@ -10,13 +10,14 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build realify
       run: |
+        export HASH=$(git rev-parse HEAD)
         make
     - uses: marvinpinto/action-automatic-releases@latest
       if: github.ref == 'refs/heads/master'
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "realifyv2"
-        prerelease: false
+        prerelease: true
         title: "${{ env.GITHUB_SHA }}"
         files: |
           *.zip
