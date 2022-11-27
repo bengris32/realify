@@ -41,8 +41,14 @@ check_realmeui_ver()
 
 prepare_feature_list() 
 {
-    # Start by copying for modification
-    cp $FEATURE_PATH $TEMP_PATH
+    # Check if the file exists
+    if [[ -e "$FEATURE_PATH" ]]; then
+        # Start by copying for modification
+        cp $FEATURE_PATH $TEMP_PATH
+    else
+        log "${FEATURE_PATH} does not exist, exiting!"
+        exit 1
+    fi
 }
 
 remove_lowend_features()
