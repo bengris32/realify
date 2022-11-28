@@ -19,8 +19,10 @@ log()
 
 remove_feature()
 {
-    log "Removing feature: ${1}"
-    sed -i "/${1}/d" $TEMP_PATH
+    if grep -iq "$1" $TEMP_PATH; then
+        log "Removing feature: ${1}"
+        sed -i "/${1}/d" $TEMP_PATH
+    fi
 }
 
 check_realmeui_ver()
