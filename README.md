@@ -30,4 +30,3 @@ Feel free to contribute and open:
 
 # Special Thanks
 - [techyminati](https://github.com/techyminati) for the method used to control features, general improvements, and realmeUI 1/2/4 support!
-- This module also uses [MMT-Extended](https://github.com/Zackptg5/MMT-Extended) by [Zackptg5](https://github.com/Zackptg5)
