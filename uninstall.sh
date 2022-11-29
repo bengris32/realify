@@ -1,17 +1,6 @@
-# Don't modify anything after this
-if [ -f $INFO ]; then
-  while read LINE; do
-    if [ "$(echo -n $LINE | tail -c 1)" == "~" ]; then
-      continue
-    elif [ -f "$LINE~" ]; then
-      mv -f $LINE~ $LINE
-    else
-      rm -f $LINE
-      while true; do
-        LINE=$(dirname $LINE)
-        [ "$(ls -A $LINE 2>/dev/null)" ] && break 1 || rm -rf $LINE
-      done
-    fi
-  done < $INFO
-  rm -f $INFO
-fi
+#!/system/bin/sh
+
+TEMP_PATH="/cache/feature.xml"
+LOG_PATH="/cache/realify.log"
+
+rm -f $TEMP_PATH $LOG_PATH
