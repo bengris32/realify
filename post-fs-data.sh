@@ -96,10 +96,6 @@ remove_lowend_features() {
 
   # Enable Multiuser support (RUI 1)
   remove_feature oppo.multiuser.entry.unsupport
-
-  # RMX2185 test
-  # Remove realme Lab from settings
-  remove_feature realme.laboratory.support
 }
 
 setup_mount() {
