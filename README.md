@@ -23,6 +23,9 @@ Currently, the module has been tested on the following devices:
 - realme C15 (RMX2180 with UI 2.0)
 - realme C21 (RMX3201 with UI 2.0)
 - realme 8 5G (RMX3241 with UI 3.0)
+- Realme 7 (RMX2151 with UI 3.0)
+- Realme Narzo 20 Pro (RMX2161 with UI 3.0)
+- Realme Narzo 30 (RMX2156 with UI 3.0)
 
 Feel free to contribute and open:
 * An issue - If the module did not work for you :(
