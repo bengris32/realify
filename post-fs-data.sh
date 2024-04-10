@@ -31,6 +31,8 @@ check_realmeui_ver()
         FEATURE_PATH="/my_product/etc/extension/realme_product_rom_extend_feature_${PRJ_NAME}.xml"
     elif [[ $RUI_VER == V4.0 ]]; then
         FEATURE_PATH="/my_product/etc/extension/feature_com.coloros.oppoguardelf.xml"
+    elif [[ $RUI_VER == V3.0 ]]; then
+        FEATURE_PATH="/my_product/etc/extension/realme_product_rom_extend_feature_${PRJ_NAME}.xml"
     elif [[ $RUI_VER == V1.0 ]]; then
         FEATURE_PATH="/oppo_product/etc/permissions/com.oppo.features.os.xml"
     else
