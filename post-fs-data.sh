@@ -1,7 +1,6 @@
 #!/system/bin/sh
 
-# TODO: Is this correct?
-PRJ_NAME=$(getprop ro.oplus.image.my_product.type)
+PRJ_NAME=$(getprop ro.boot.prjname)
 RUI_VER=$(getprop ro.build.version.realmeui)
 TEMP_PATH="/cache/feature.xml"
 LOG_PATH="/cache/realify.log"
